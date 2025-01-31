@@ -68,7 +68,7 @@ class HomePage extends StatelessWidget {
             ),
             Row(
               children: [
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width / 2,
                   child: Image.asset(
                       'assets/images/ab01.016884c7bf778010e79c.jpg'),
@@ -121,23 +121,20 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  child: Center(
-                    child: Text("Applay now",style: TextStyle(
-                      color: Colors.white
-                    ),),
-                  ),
                   width: 120,
                   height: 40,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.black,
                 ),
+                  child: Center(
+                    child: Text("Applay now",style: TextStyle(
+                      color: Colors.white
+                    ),),
+                  ),
                 ),
                 SizedBox(width: 10,),
                             Container(
-                  child: Center(
-                    child: Text("learn more"),
-                  ),
                   width: 120,
                   height: 40,
                 decoration: BoxDecoration(
@@ -146,15 +143,55 @@ class HomePage extends StatelessWidget {
                   ),
                   borderRadius: BorderRadius.circular(20),
                 ),
+                  child: Center(
+                    child: Text("learn more"),
+                  ),
                 ),
               ],
             ),
+            SizedBox(height: 50,),
+            Container(
+              width: double.infinity,
+              height: 600,
+              color: const Color.fromARGB(255, 0, 1, 43),
+              child: 
+              Column(
+                spacing: 15,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 30,),
+                  Text("insiring Statement",style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    color: Colors.white
+                  ),),
+                  Text("Join us in creating a smarter, more independent generation by connecting students with real-world opportunities!",style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  ),),
+                  Text("Quick Links",style: fontColorWhite(),),
+                  Text("explore Gigs",style: fontColorWhite(),),
+                  Text("Hire Talent",style: fontColorWhite(),),
+                  Text("Companes",style: fontColorWhite(),),
+                  Text("Contact Us",style: fontColorWhite(),),
+                  SizedBox(height: 30,),
+                  Text("contact with us",style: fontColorWhite(),),
+                  Text("subscribe to our Newletter",style: fontColorWhite(),)
+
+                ],
+              ),
+            )
           ],
         ),
       ),
     );
   }
 
-  
+  TextStyle fontColorWhite(){
+    return TextStyle(
+   color: Colors.white
+    );
+  }
   }
 
