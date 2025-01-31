@@ -177,8 +177,32 @@ class HomePage extends StatelessWidget {
                   Text("Contact Us",style: fontColorWhite(),),
                   SizedBox(height: 30,),
                   Text("contact with us",style: fontColorWhite(),),
-                  Text("subscribe to our Newletter",style: fontColorWhite(),)
-
+                  Text("subscribe to our Newletter",style: fontColorWhite(),),
+   Row(
+     children: [
+       Expanded(
+         child: TextField(
+          
+          decoration: InputDecoration(
+            hintText: "enter your email",
+            filled: true,
+            fillColor: Colors.white
+          ),
+         ),
+       ),
+       Container(
+        child: Center(child: Text("Subscribe",style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Colors.white
+        ),)),
+        width: 170,
+        height: 50,
+        decoration: BoxDecoration(
+        color: Colors.blue,
+        
+       ),),
+     ],
+   ),
                 ],
               ),
             )
